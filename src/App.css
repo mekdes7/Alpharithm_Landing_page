@@ -1,0 +1,59 @@
+
+
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.swiper-container {
+  overflow: hidden; 
+  width: 100%;
+  padding: 0 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.swiper-slide-active {
+  transform: scale(1.05); 
+  z-index: 20; 
+  opacity: 1;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  transform: scale(0.95); 
+  opacity: 0.8; 
+  z-index: 10;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.9); 
+  opacity: 0.6;
+  z-index: 5;
+}
