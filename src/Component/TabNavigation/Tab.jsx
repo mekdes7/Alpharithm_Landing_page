@@ -68,21 +68,23 @@ const Tabs = () => {
       </div>
 
      
-      <div className="bg-gray-100 flex justify-center p-2 rounded-lg shadow-md mb-8">
-        {sections.map((section, index) => (
-          <button
-            key={section.id}
-            onClick={() => handleTabClick(index)}
-            className={`px-4 py-2 transition-all duration-300 rounded-md transform ${
-              activeIndex === index
-                ? "bg-blue-600 text-white rounded-4xl shadow-lg"
-                : "text-gray-700"
-            } hover:bg-gray-200`}
-          >
-            {section.title}
-          </button>
-        ))}
-      </div>
+      <div className="bg-gray-100 flex flex-wrap justify-center p-2 rounded-lg shadow-md mb-8 gap-2">
+  {sections.map((section, index) => (
+    <button
+      key={section.id}
+      onClick={() => handleTabClick(index)}
+      className={`px-3 sm:px-4 py-2 text-sm sm:text-base md:text-lg transition-all duration-300 rounded-md transform ${
+        activeIndex === index
+          ? "bg-blue-600 text-white shadow-lg"
+          : "text-gray-700"
+      } hover:bg-gray-200`}
+    >
+      {section.title}
+    </button>
+  ))}
+</div>
+
+
 
     
       <div className="w-full max-w-max">
